@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+div.IA21-player{
+    border: black solid 1px;
+}
+
+div.IA21-player .controls {
+    border-top:  black solid 1px;
+    display: flex   ;
+}
+
+.pause {
+    border: 0 none;
+    border-right: 1px solid black;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.dragbartime, dragbarvol{
+    position: absolute;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.dragbartime, dragbarvol:before {
+    content: " ";
+    position: relative;
+    border-top: 1px solid rgb(95, 95, 95);
+    width: 100%;
+    top: calc(50% - .5px);
+    align-items: center;
+}
+
+.draggable {
+    background-color: red;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - .25rem);
+
+}
