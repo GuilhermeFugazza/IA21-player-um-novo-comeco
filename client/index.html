@@ -6,21 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
     <title>Mytube</title>
 </head>
 
 <body>
-    <div class="player">
-        <video></video>
+    <div class="ia21-player">
+        <video>
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
+        </video>
         <div class="controls">
-            <button class="pause">▶</button>
-            <div class="dragbartime">
+            <button class="play">
+                ▶
+            </button>
+            <div class="dragbar timeline">
                 <div class="draggable"></div>
             </div>
             <div class="timer">
                 00:00
             </div>
-            <div class="dragbarvol">
+            <div class="volume">
+                🔊
+            </div>
+            <div class="dragbar volume">
                 <div class="draggable"></div>
             </div>
         </div>
