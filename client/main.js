@@ -19,5 +19,11 @@ containers.forEach(el => {
         const h = Math.floor(m / 60)
         
         timer.innerText = `${h}:${m%60}:${s%60} `
+
+        //const s = Math.floor(video.currentTime)
+        //const m = Math.floor(s / 60)
+        //const h = Math.floor(m / 60)
+        
+        //timer.innerText = `${h}:${m%60}:${s%60} `
     })
 })  
