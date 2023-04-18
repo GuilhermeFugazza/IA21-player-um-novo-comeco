@@ -5,3 +5,6 @@ Guilherme Fugazza
 git add --all
 git commit -m "_texto_"
 git push
+
+# <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <i class="material-icons">pause</i>
