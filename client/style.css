@@ -34,9 +34,9 @@ div.ia21-player div.controls button.playpause {
 div.ia21-player div.controls button.playpause div.play {
     width: 0;
     height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 17.5px solid #000000;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 15px solid #000000;
 }
 
 div.ia21-player div.controls div.dragbar {
@@ -53,6 +53,7 @@ div.ia21-player div.controls div.dragbar::before {
 }
 
 div.ia21-player div.controls div.dragbar div.draggable {
+    --percent: 0%;
     background-color: red;
     width: .5em;
     height: .5em;
