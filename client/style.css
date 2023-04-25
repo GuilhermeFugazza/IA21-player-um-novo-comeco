@@ -6,60 +6,48 @@ div.ia21-player {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    width: 720px;
+    width: 720px
 }
 
 div.ia21-player video {
     width: 100%;
 }
 
-div.ia21-player .controls {
-    font-family: sans-serif;
+div.ia21-player div.controllers { 
     display: flex;
     border-top: 1px solid black;
     column-gap: 10px;
 }
 
-div.ia21-player .controls .timer {
-    display: flex;
-    align-items: center;
-}
-
-div.ia21-player div.controls button.playpause {
+div.ia21-player div.controllers button.play-pause {
     background-color: transparent;
     border: 0 none;
+    border-right: 1px solid black;
     cursor: pointer;
 }
 
-div.ia21-player div.controls button.playpause div.play {
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 15px solid #000000;
-}
-
-div.ia21-player div.controls div.dragbar {
+div.ia21-player div.controllers div.dragbar {
     flex-grow: 1;
     position: relative;
 }
 
-div.ia21-player div.controls div.dragbar::before {
+div.ia21-player div.controllers div.dragbar:before {
     content: " ";
     position: absolute;
-    border-top: 1px solid rgb(56, 56, 56);
-    width: 100%;
     top: calc(50% - .5px);
+    border-top: 1px solid red;
+    width: 100%;
 }
 
-div.ia21-player div.controls div.dragbar div.draggable {
+div.ia21-player div.controllers div.dragbar div.draggable {
     --percent: 0%;
     background-color: red;
-    width: .5em;
-    height: .5em;
+    width: .5rem;
+    height: .5rem;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    top: calc(50% - .25em);
+    top: calc(50% - .25rem);
     left: calc(var(--percent) - .25rem);
+    pointer-events: none;
 }
