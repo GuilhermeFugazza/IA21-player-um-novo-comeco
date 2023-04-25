@@ -1,22 +1,40 @@
 * {
     box-sizing: border-box;
+    font-size: 1.08em;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #1d1d1d 0%, #0f0f0f 100%);
+    padding-top: 5%;
+    font-family: sans-serif;
+    
 }
 
 div.ia21-player {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    width: 720px
+    width: 1200px; 
+    border-radius: 5px 5px 5px 5px ;
 }
 
 div.ia21-player video {
     width: 100%;
+    border-radius: 5px 5px 0px 0px ;
 }
 
 div.ia21-player div.controllers { 
     display: flex;
     border-top: 1px solid black;
-    column-gap: 10px;
+    column-gap: 1em;
+    padding-right: 1em;
+    background-color: white;
+    border-radius: 0px 0px 5px 5px;
 }
 
 div.ia21-player div.controllers button.play-pause {
@@ -29,6 +47,7 @@ div.ia21-player div.controllers button.play-pause {
 div.ia21-player div.controllers div.dragbar {
     flex-grow: 1;
     position: relative;
+    
 }
 
 div.ia21-player div.controllers div.dragbar:before {
