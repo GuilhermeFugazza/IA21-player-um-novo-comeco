@@ -3,58 +3,140 @@
     font-size: 1.08em;
 }
 
+header{
+    margin: 0;
+    height: 14vh;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    background: transparent;
+    overflow: hidden;
+    padding-left: 5vw;
+    padding-bottom: 5vw;
+}
+
+.logo {
+    font-size: 3px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+
+.sun{
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+
+.earth, .moon {
+    position: absolute;
+    border-style: solid;
+    border-color:white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.earth {
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 36.5s linear infinite;
+}
+
+.moon {
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    animation: orbit 2.7s linear infinite;
+}
+
+.earth::before, 
+.moon::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 body{
     background: linear-gradient(to right, #1d1d1d 0%, #0f0f0f 100%);
-    
+    padding-top: 1vh;  
 }
 
 main {
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
 }
 
 section.videoPrincipal, section.videoAlt { 
     display: flex;
     justify-content: left;
     padding-left: 5vw;
-    align-items: center;
+    align-items: top;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #1d1d1d 0%, #0f0f0f 100%);
-    padding-top: 5%;
+    background: transparent;
     font-family: sans-serif;
 }
 
 section.videoAlt video {
-    width: 500px; 
+    width: 12vw; 
+    border-radius: 0.5vw;
 }
 
 div.ia21-player {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    width: 1200px; 
-    border-radius: 5px 5px 5px 5px ;
+    /* border: 1px solid black; */
+    width: 60vw; 
+    /* border-radius: 5px 5px 5px 5px ; */
 }
 
 div.ia21-player video {
     width: 100%;
-    border-radius: 5px 5px 0px 0px ;
+    padding-bottom: 2vh;
+    /* border-radius: 5px 5px 0px 0px ; */
 }
 
 div.ia21-player div.controllers { 
     display: flex;
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     column-gap: 1em;
     padding-right: 1em;
-    background-color: white;
-    border-radius: 0px 0px 5px 5px;
+    background: linear-gradient(to right, #4b4b4b 0%, #383838 100%);
+    border-radius: 1em; 
 }
 
 div.ia21-player div.controllers button.play-pause {
     background-color: transparent;
     border: 0 none;
-    border-right: 1px solid black;
     cursor: pointer;
 }
 
@@ -93,6 +175,5 @@ div.ia21-player div.controllers div.timer {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid black;
   padding-right: 0.8em
 }
