@@ -20,14 +20,14 @@ const containers = document.querySelectorAll("div.ia21-player")
 
       video.addEventListener("timeupdate", () => {
         const percent = (video.currentTime / video.duration) * 100
+        const s = Math.floor(video.currentTime)
+        const m = Math.floor(s / 60)
+        const h = Math.floor(m / 60)
+        const sh = `${h % 60}`.padStart(2, "0")
+        const sm = `${m % 60}`.padStart(2, "0")
+        const ss = `${s % 60}`.padStart(2, "0")
         timelineDrag.style.setProperty("--percent", `${percent}%`)
-        timer.innerText = Math.floor(video.currentTime)
-
-        if (timer.innerText >= 60) {
-            min = Math.floor(timer.innerText/60)
-            seg = Math.floor(timer.innerText%60)
-            timer.innerText = min + ":" + seg
-        }
+        timer.innerText = `${sh}:${sm}:${ss}`
       })
 
       // ---✀------------------------------------------------------

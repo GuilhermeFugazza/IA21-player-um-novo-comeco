@@ -4,15 +4,29 @@
 }
 
 body{
+    background: linear-gradient(to right, #1d1d1d 0%, #0f0f0f 100%);
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+section.videoPrincipal, section.videoAlt { 
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 5vw;
     align-items: center;
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, #1d1d1d 0%, #0f0f0f 100%);
     padding-top: 5%;
     font-family: sans-serif;
-    
+}
+
+section.videoAlt video {
+    width: 500px; 
 }
 
 div.ia21-player {
@@ -69,4 +83,16 @@ div.ia21-player div.controllers div.dragbar div.draggable {
     top: calc(50% - .25rem);
     left: calc(var(--percent) - .25rem);
     pointer-events: none;
+}
+
+div.ia21-player div.controllers div.dragbar.timeline {
+  width: 40%;
+}
+
+div.ia21-player div.controllers div.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid black;
+  padding-right: 0.8em
 }
