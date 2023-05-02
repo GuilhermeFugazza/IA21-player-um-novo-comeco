@@ -130,8 +130,8 @@ div.ia21-player div.controllers {
     /* border-top: 1px solid black; */
     column-gap: 1em;
     padding-right: 1em;
-    background: linear-gradient(to right, #4b4b4b 0%, #383838 100%);
-    border-radius: 1em; 
+    background: linear-gradient(to right, #2e2e2e 0%, #242424 100%);
+    border-radius: 0.5em; 
 }
 
 div.ia21-player div.controllers button.play-pause {
