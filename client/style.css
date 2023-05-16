@@ -5,7 +5,7 @@
 
 header{
     margin: 0;
-    height: 14vh;
+    height: 150px;
     display: flex;
     align-items: left;
     justify-content: left;
@@ -54,7 +54,7 @@ header{
     right: 0;
     width: 8em;
     height: 8em;
-    animation: orbit 2.7s linear infinite;
+    animation: orbit 1.2s linear infinite;
 }
 
 .earth::before, 
@@ -106,7 +106,7 @@ section.videoPrincipal, section.videoAlt {
     font-family: sans-serif;
 }
 
-section.videoAlt video {
+section.videoAlt div {
     width: 12vw; 
     border-radius: 0.5vw;
 }
@@ -127,11 +127,12 @@ div.ia21-player video {
 
 div.ia21-player div.controllers { 
     display: flex;
+    color: white;
     /* border-top: 1px solid black; */
     column-gap: 1em;
     padding-right: 1em;
     background: linear-gradient(to right, #2e2e2e 0%, #242424 100%);
-    border-radius: 0.5em; 
+    border-radius: 1em; 
 }
 
 div.ia21-player div.controllers button.play-pause {
@@ -176,4 +177,8 @@ div.ia21-player div.controllers div.timer {
   justify-content: center;
   align-items: center;
   padding-right: 0.8em
+}
+
+.playlist {
+    background-color: red;
 }

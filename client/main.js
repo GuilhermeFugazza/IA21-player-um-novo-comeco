@@ -1,11 +1,28 @@
-const containers = document.querySelectorAll("div.ia21-player")
+const containers = document.querySelectorAll("div.ia21-player, div.playerAlt")
 
-    containers.forEach(container => {
+    containers.forEach(async container => {
       const btPlayPause = container.querySelector("button.play-pause")
       const video = container.querySelector("video")
       const timeline = container.querySelector(".dragbar.timeline")
       const timelineDrag = timeline.querySelector(".draggable")
       const timer = container.querySelector(".timer")
+      const playlist = container.querySelector(".playlist")
+
+    // ---✀------------------------------------------------------
+
+
+      const requisicao = await fetch(container.dataset.playlist)
+      const json = await requisicao.json()
+    
+      json.forEach(movie => {
+        playlist.innerHTML += `
+          <div>${movie.title}</div>
+          <img src="${movie.thumb}">
+        `
+      })
+
+    // ---✀------------------------------------------------------
+
 
       btPlayPause.addEventListener("click", () => {
         if (video.paused) {
